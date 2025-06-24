@@ -49,14 +49,6 @@ nav a:hover {
   color: #ff5e84;
 }
 
-/* Hero Section */
-.hero {
-  background-color: #ff5e84;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
-}
-
 /* Produtos */
 .produtos {
   padding: 40px 20px;
@@ -79,6 +71,9 @@ nav a:hover {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .produto:hover {
@@ -86,11 +81,12 @@ nav a:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.produto img {
+.produto-imagem {
   max-width: 100%;
   height: auto;
   border-radius: 8px;
   transition: transform 0.3s ease;
+  margin-bottom: 10px;
 }
 
 .produto h3 {
@@ -100,6 +96,25 @@ nav a:hover {
 
 .produto p {
   margin: 5px 0;
+}
+
+.acordes {
+  margin-top: 20px;
+}
+
+.acorde-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.acorde-item {
+  padding: 5px 10px;
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  width: fit-content;
 }
 
 /* Footer */

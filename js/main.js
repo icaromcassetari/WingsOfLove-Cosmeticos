@@ -1,4 +1,3 @@
-
 // Adiciona efeito de scroll na barra de navegação
 window.addEventListener('scroll', () => {
   const body = document.body;
