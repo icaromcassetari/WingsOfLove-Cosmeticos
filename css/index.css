@@ -65,3 +65,49 @@
   border: 4px solid #c71f37;
   border-radius: 8px;
 }
+
+
+/* index.css */
+
+.produtos {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.produto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.produto {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.produto img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.produto h3 {
+  margin: 15px 0 10px;
+  color: #c71f37;
+}
+
+.produto p {
+  margin: 5px 0;
+}
