@@ -7,6 +7,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 40px 20px;
+  background-image: url('images/bg-about.png'); /* Substitua pelo caminho da sua imagem */
+  background-size: cover; /* Ajusta a imagem para cobrir todo o espaço */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
 }
 
 .hero-content {
