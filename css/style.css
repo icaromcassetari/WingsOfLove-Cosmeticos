@@ -77,3 +77,73 @@ footer {
     margin-top: 20px;
   }
 }
+
+
+
+/* Produtos */
+.produtos {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.produto-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.produto {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.produto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.produto-imagem {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  margin-bottom: 10px;
+}
+
+.produto h3 {
+  margin: 15px 0 10px;
+  color: #c71f37;
+}
+
+.produto p {
+  margin: 5px 0;
+}
+
+.acordes {
+  margin-top: 20px;
+}
+
+.acorde-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.acorde-item {
+  padding: 5px 10px;
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+  border-radius: 5px;
+  width: fit-content;
+}
