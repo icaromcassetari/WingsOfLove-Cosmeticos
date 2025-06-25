@@ -109,7 +109,7 @@ nav a:hover {
 }
 
 .acorde-item {
-  padding: 5px 10px;
+  padding: 1px 2px;
   text-align: center;
   color: white;
   font-size: 0.8rem;
@@ -118,7 +118,7 @@ nav a:hover {
 }
 
 .accord-bar {
-  padding: 8px 12px;
+  padding: 1px 2px;
   font-size: 0.8rem;
   font-weight: bold;
   text-align: center;
