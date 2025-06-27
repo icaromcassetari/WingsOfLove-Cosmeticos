@@ -1,11 +1,10 @@
 <script setup>
+import NavBar from './components/NavBar.vue'
+import Banner from './components/BannerStart.vue'
 </script>
 
 <template>
-  <div class="cotainer">
-    <section>
-      <b-button type="is-primary">Primary</b-button>
-    </section>
-  </div>
+  <NavBar></NavBar>
+  <Banner></Banner>
 </template>
 

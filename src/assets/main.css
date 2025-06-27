@@ -1,5 +1,35 @@
 @import './base.css';
 
+html {
+  overflow-y: auto !important;
+}
+.navbar-item img {
+  max-height: 2.85rem !important;
+}
+
+.is-color-red {
+  color: #c71f37 !important;
+}
+
+.is-back-red {
+  background-color: #c71f37 !important;
+}
+
+.is-hr-red {
+  background-color: #c71f37 !important;
+  border-radius: 0.35rem;
+  height: 8px;
+}
+
+.is-bg-dark {
+  background-color: rgb(55 55 61) !important;
+  color: white;
+}
+
+.is-border-red {
+  border: 1px solid #c71f387c;
+}
+/*
 #app {
   max-width: 1280px;
   margin: 0 auto;
@@ -32,4 +62,4 @@ a,
     grid-template-columns: 1fr 1fr;
     padding: 0 2rem;
   }
-}
+} */
