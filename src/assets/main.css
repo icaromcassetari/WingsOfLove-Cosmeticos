@@ -1,10 +1,47 @@
-@import './base.css';
-
-html {
+/* html {
   overflow-y: auto !important;
-}
-.navbar-item img {
+} */
+/* .navbar-item img {
   max-height: 2.85rem !important;
+} */
+
+body {
+  background-color: rgb(55 55 61) !important;
+}
+
+.open-animation-top {
+  animation-name: topOpen;
+  animation-duration: 1s;
+}
+
+@keyframes topOpen {
+  from {
+    transform: translate(0px, -150px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+@keyframes leftOpen {
+  from {
+    transform: translate(0px, -150px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(0px, 0px);
+    opacity: 1;
+  }
+}
+
+.fundo-banner {
+  background: linear-gradient(0deg, #dc3545 -20%, rgb(55 55 61) 40%);
+}
+
+.fundo-produtos {
+  background: linear-gradient(180deg, #a53542 0%, #dc3545 100%);
 }
 
 .is-color-red {
@@ -15,10 +52,8 @@ html {
   background-color: #c71f37 !important;
 }
 
-.is-hr-red {
-  background-color: #c71f37 !important;
-  border-radius: 0.35rem;
-  height: 8px;
+.is-hr {
+  opacity: 1;
 }
 
 .is-bg-dark {
@@ -29,37 +64,38 @@ html {
 .is-border-red {
   border: 1px solid #c71f387c;
 }
-/*
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+
+.shadow-medium {
+  box-shadow: 0px 0px 25px 0px hsl(0deg 0% 8.81%);
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.h-100v {
+  min-height: calc(100vh - 3.35rem);
+  /* min-height: 100vh; */
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+.navbar {
+  height: 3.35rem;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
+.blur {
+  backdrop-filter: blur(15px);
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-} */
+.navbar-nav .nav-link.active {
+  color: grey !important;
+}
+
+.navbar-nav .nav-link {
+  color: white !important;
+}
+
+.btn-dark-primary {
+  background-color: #37373d !important;
+  color: white !important;
+}
+
+.btn-dark-primary:hover {
+  background-color: #c71f37 !important;
+  color: white !important;
+}

@@ -1,20 +1,21 @@
 
 <script setup >
-import { BNavbar, BNavbarItem } from 'buefy'
-import logo from '../assets/imagens/logo-semtexto.png'
+import logo from '@/assets/imagens/logo-semtexto.png'
 </script>
 <template>
-  <b-navbar :type="'is-dark'" spaced mobile-burger fixed-top>
-    <template #brand>
-      <b-navbar-item tag="router-link" :to="{ path: '/' }">
-        <img :src="logo" alt="Logo Wings Of Love" />
-      </b-navbar-item>
-    </template>
-    <template #end>
-      <b-navbar-item href="#">Produtos</b-navbar-item>
-      <b-navbar-item href="#">Sobre Nós</b-navbar-item>
-      <b-navbar-item href="#">Contatos</b-navbar-item>
-      <b-navbar-item href="#">Perguntas Frequentes</b-navbar-item>
-    </template>
-  </b-navbar>
+  <BNavbar :toggleable="'lg'" variant="transparent" container fixed="top" class="blur">
+    <BNavbarBrand href="#">
+      <img :src="logo" alt="Logo Wings Of Love" style="width: 80px" class="text-white" />
+    </BNavbarBrand>
+    <BNavbarToggle target="nav-scroll" />
+    <BCollapse id="nav-scroll" is-nav class="">
+      <BNavbarNav class="ms-auto mb-2 mb-lg-0">
+        <BNavItem href="#" class="fw-bold" :active="true">Home</BNavItem>
+        <BNavItem href="#" class="fw-bold">Produtos</BNavItem>
+        <BNavItem href="#" class="fw-bold">Contatos</BNavItem>
+        <BNavItem href="#" class="fw-bold">Perguntas</BNavItem>
+        <BNavItem href="#" class="fw-bold">Sobre Nós</BNavItem>
+      </BNavbarNav>
+    </BCollapse>
+  </BNavbar>
 </template>
