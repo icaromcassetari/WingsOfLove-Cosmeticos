@@ -5,11 +5,11 @@ import Produtos from './components/ProdutosSale.vue'
 </script>
 
 <template >
-  <NavBar v-b-color-mode="'dark'"></NavBar>
-  <section v-b-color-mode="'dark'" class="fundo-banner">
+  <NavBar></NavBar>
+  <section class="fundo-banner">
     <Banner></Banner>
   </section>
-  <section v-b-color-mode="'dark'" class="fundo-produtos">
+  <section class="fundo-produtos">
     <Produtos></Produtos>
   </section>
 </template>

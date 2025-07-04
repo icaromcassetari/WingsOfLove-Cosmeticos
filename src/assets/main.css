@@ -37,11 +37,15 @@ body {
 }
 
 .fundo-banner {
-  background: linear-gradient(0deg, #dc3545 -20%, rgb(55 55 61) 40%);
+  background-image: url('./imagens/fundoBanner2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .fundo-produtos {
-  background: linear-gradient(180deg, #a53542 0%, #dc3545 100%);
+  background: linear-gradient(180deg, #da90a7 0%, #dc3545 100%);
+  /* hsl(340 52% 72% 1) */
 }
 
 .is-color-red {
@@ -70,8 +74,8 @@ body {
 }
 
 .h-100v {
-  min-height: calc(100vh - 3.35rem);
-  /* min-height: 100vh; */
+  /* min-height: calc(100vh - 3.35rem); */
+  min-height: 120vh;
 }
 
 .navbar {
@@ -83,7 +87,7 @@ body {
 }
 
 .navbar-nav .nav-link.active {
-  color: grey !important;
+  color: rgb(65, 64, 64) !important;
 }
 
 .navbar-nav .nav-link {
