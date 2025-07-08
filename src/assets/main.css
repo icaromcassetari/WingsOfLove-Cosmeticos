@@ -103,3 +103,59 @@ body {
   background-color: #c71f37 !important;
   color: white !important;
 }
+
+.card-perfumes-body {
+  transition: 300ms ease-in-out;
+  height: 45%;
+}
+
+.card-perfumes-header {
+  transition: 300ms ease-in-out;
+  height: 55% !important;
+  border-bottom-left-radius: 20px !important;
+  border-top-left-radius: 100px !important;
+  border-top-right-radius: 20px !important;
+  border-bottom-right-radius: 100px !important;
+  /* box-shadow: 15px 15px 12px -5px #dc4a5b !important; */
+  position: relative;
+  width: 90% !important;
+  align-self: anchor-center !important;
+}
+
+.img-card-perfume {
+  border-bottom-left-radius: 20px !important;
+  border-top-left-radius: 100px !important;
+  border-top-right-radius: 20px !important;
+  border-bottom-right-radius: 100px !important;
+}
+
+.card-perfumes:hover .card-perfumes-body {
+  height: 100%;
+}
+
+.card-perfumes:hover .card-perfumes-header {
+  height: 0px !important;
+  position: unset;
+  padding: 0px !important;
+  margin: 0px !important;
+}
+
+.card-perfumes:hover .img-card-perfume {
+  height: 0px !important;
+  width: 0px !important;
+}
+
+.card-perfumes {
+  display: inline-flex;
+  height: 100%;
+  min-height: 500px;
+  background-color: #d3d3d3a3 !important;
+}
+
+.card-perfumes:hover .text-animation {
+  display: none;
+}
+
+.card-perfumes:hover .text-animation-notas {
+  display: block !important;
+}
