@@ -12,9 +12,9 @@ import logo from '@/assets/imagens/logo-semtexto.png'
       <BNavbarNav class="ms-auto mb-2 mb-lg-0">
         <BNavItem href="#" class="fw-bold" :active="true">Home</BNavItem>
         <BNavItem href="#" class="fw-bold">Perfumes</BNavItem>
-        <BNavItem href="#" class="fw-bold">Contatos</BNavItem>
-        <BNavItem href="#" class="fw-bold">Perguntas</BNavItem>
         <BNavItem href="#" class="fw-bold">Sobre Nós</BNavItem>
+        <BNavItem href="#" class="fw-bold">Perguntas</BNavItem>
+
       </BNavbarNav>
     </BCollapse>
   </BNavbar>

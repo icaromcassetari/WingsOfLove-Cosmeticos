@@ -103,17 +103,17 @@ const listaPerfumes = ref([
 </script>
 <template>
   <div class="container h-100v">
-    <div class="row mb-5">
+    <div class="row mb-3">
       <div class="col">
-        <h1 class="text-center text-muted fw-bold">Perfumes</h1>
+        <h1 class="text-center text-muted fw-light">PERFUMES</h1>
       </div>
     </div>
-    <div class="row mb-5">
+    <div class="row ">
       <div class="col col-md-2">
         <BDropdown
-          text="Categorias"
+          text="CATEGORIAS"
           class="mt-2 p-0 text-muted"
-          variant="light shadow  w-100 rounded-0 btn-lg"
+          variant="danger shadow  w-100 rounded-0 btn-lg fw-bold"
         >
           <BDropdownItem>Cítricos</BDropdownItem>
           <BDropdownItem>Frutas, Vegetais e Nozes</BDropdownItem>
@@ -130,10 +130,10 @@ const listaPerfumes = ref([
           <BDropdownItem>Não categorizado</BDropdownItem>
         </BDropdown>
       </div>
-      <div class="col">
+      <div class="col-12 col-md-10">
         <BInputGroup class="mt-2 shadow">
           <template #prepend>
-            <BInputGroupText class="border-white rounded-0 bg-secondary"
+            <BInputGroupText class="border-0 rounded-0 bg-danger"
               ><searchHealtIcon class="text-white"
             /></BInputGroupText>
           </template>
@@ -143,19 +143,22 @@ const listaPerfumes = ref([
             class="form-control form-control-lg border-white rounded-0"
           />
           <template #append>
-            <BButton variant="secondary rounded-0 fw-bold border-0">BUSCAR</BButton>
+            <BButton variant="danger rounded-0 fw-bold border-0">BUSCAR</BButton>
           </template>
         </BInputGroup>
       </div>
     </div>
+    <div class="row mb-4 mt-4">
+      <small class="d-block text-center text-dark fw-bold">*A Wings of Love Cosméticos não possui conexão de qualquer natureza com as marcas citadas abaixo, sendo elas, de propriedade das respectivas empresas.*</small>
+    </div>
     <div class="row v-100h">
-      <div class="col col-md-3 mb-4 d-flex"
+      <div class="col-12 col-md-3 mb-4 d-flex"
         v-for="(valueListaPerfumes , indexListaPerfumes ) in listaPerfumes"
         :key="indexListaPerfumes"
       >
         <div class="card card-perfumes border-0 rounded-0 p-3 w-100 ">
-          <div class="card-header card-perfumes-header border-0 bg-white shadow">
-            <img :src="valueListaPerfumes.image" class="img-fluid img-card-perfume" :alt="valueListaPerfumes.nome" >
+          <div class="card-header card-perfumes-header border-0 bg-white shadow d-flex align-items-center justify-content-center">
+            <img :src="valueListaPerfumes.image" class="img-fluid img-card-perfume" :alt="valueListaPerfumes.nome" style="max-height: 230px;">
           </div>
           <div class="card-body border-0 bg-transparent  card-perfumes-body">
             <p class="text-muted fw-bold text-animation">{{ valueListaPerfumes.nome }}</p>

@@ -44,8 +44,12 @@ body {
 }
 
 .fundo-produtos {
-  background: linear-gradient(180deg, #da90a7 0%, #dc3545 100%);
+  background: linear-gradient(180deg, #da90a7 0%, #e08688 100%);
   /* hsl(340 52% 72% 1) */
+}
+
+.fundo-contato {
+  background-color: #dc3545;
 }
 
 .is-color-red {
