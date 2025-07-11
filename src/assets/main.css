@@ -90,12 +90,15 @@ body {
   backdrop-filter: blur(15px);
 }
 
+.bg-barra {
+  background-color: rgb(248 249 250 / 50%);
+}
 .navbar-nav .nav-link.active {
-  color: rgb(65, 64, 64) !important;
+  color: rgb(80, 80, 80) !important;
 }
 
 .navbar-nav .nav-link {
-  color: white !important;
+  color: #dc3545 !important;
 }
 
 .btn-dark-primary {
@@ -115,22 +118,24 @@ body {
 
 .card-perfumes-header {
   transition: 300ms ease-in-out;
-  height: 55% !important;
-  border-bottom-left-radius: 20px !important;
+  /* height: 55% !important; */
+  /* border-bottom-left-radius: 20px !important;
   border-top-left-radius: 100px !important;
   border-top-right-radius: 20px !important;
-  border-bottom-right-radius: 100px !important;
+  border-bottom-right-radius: 100px !important; */
+  border-radius: 25px !important;
   /* box-shadow: 15px 15px 12px -5px #dc4a5b !important; */
   position: relative;
-  width: 90% !important;
+  /* width: 90% !important; */
   align-self: anchor-center !important;
+  /* padding: 10px !important; */
 }
 
 .img-card-perfume {
-  border-bottom-left-radius: 20px !important;
+  /* border-bottom-left-radius: 20px !important;
   border-top-left-radius: 100px !important;
   border-top-right-radius: 20px !important;
-  border-bottom-right-radius: 100px !important;
+  border-bottom-right-radius: 100px !important; */
 }
 
 .card-perfumes:hover .card-perfumes-body {
@@ -152,8 +157,12 @@ body {
 .card-perfumes {
   display: inline-flex;
   height: 100%;
-  min-height: 500px;
-  background-color: #d3d3d3a3 !important;
+  min-height: 350px;
+  background-color: rgb(248 249 250 / 50%) !important;
+}
+
+.grid-perfumes {
+  /* width: 20%; */
 }
 
 .card-perfumes:hover .text-animation {
@@ -162,4 +171,15 @@ body {
 
 .card-perfumes:hover .text-animation-notas {
   display: block !important;
+}
+
+.border-misao {
+  /* border-radius: 23% 77% 31% 69% / 67% 37% 63% 33% !important; */
+  background-color: #dc354594 !important;
+  padding: 80px;
+}
+
+.card-sobreImage {
+  background-image: url('@/assets/imagens/PORTADA20FRAGANCIAS.png');
+  background-size: cover;
 }

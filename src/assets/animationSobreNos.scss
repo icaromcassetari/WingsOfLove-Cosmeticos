@@ -28,7 +28,7 @@ $rocks2Duration: 240s;
 
 .paralax .foreground {
   height: 50%;
-  bottom: 0;
+  bottom: -10;
   // background: url('http://www.testomic.com/public/codepen-assets/img/paralax/foreground.png')
   // repeat-x;
   animation: slideshow $foregroundDuration linear infinite;
@@ -36,21 +36,21 @@ $rocks2Duration: 240s;
 
 .paralax .hills {
   height: 40%;
-  bottom: 0%;
+  bottom: -10%;
   background: url('../assets//imagens/hills.png') repeat-x;
   animation: slideshow $hillsDuration linear infinite;
 }
 
 .paralax .rocks1 {
   height: 35%;
-  bottom: 0%;
+  bottom: -10%;
   background: url('../assets//imagens/rocks1.png') repeat-x;
   animation: slideshow $rocks1Duration linear infinite;
 }
 
 .paralax .rocks2 {
   height: 40%;
-  bottom: 0%;
+  bottom: -10%;
   background: url('../assets//imagens/rocks2.png') repeat-x;
   animation: slideshow $rocks2Duration linear infinite;
 }
@@ -58,7 +58,7 @@ $rocks2Duration: 240s;
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 300px) {
   .paralax .foreground {
-    background-size: 90% 133%;
+    background-size: 90% 100%;
   }
   .paralax .hills {
     background-size: 90% 100%;
@@ -74,7 +74,7 @@ $rocks2Duration: 240s;
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .paralax .foreground {
-    background-size: 70% 133%;
+    background-size: 70% 100%;
   }
   .paralax .hills {
     background-size: 70% 100%;
@@ -89,7 +89,7 @@ $rocks2Duration: 240s;
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
   .paralax .foreground {
-    background-size: 50% 133%;
+    background-size: 50% 100%;
   }
   .paralax .hills {
     background-size: 50% 100%;
@@ -104,7 +104,7 @@ $rocks2Duration: 240s;
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
   .paralax .foreground {
-    background-size: 25% 133%;
+    background-size: 25% 100%;
   }
   .paralax .hills {
     background-size: 25% 100%;
@@ -137,5 +137,56 @@ $rocks2Duration: 240s;
   100% {
     -webkit-filter: hue-rotate(0deg) brightness(1);
     filter: hue-rotate(0deg) brightness(1);
+  }
+}
+
+.border-animed-rotate-wash {
+  animation: rotateBorder;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes rotateBorder {
+  0% {
+    border-radius: 23% 77% 31% 69% / 67% 37% 63% 33%;
+    // border-radius: 25% 75% 20% 80% / 77% 26% 74% 23%;
+  }
+  10% {
+    border-radius: 37% 63% 20% 80% / 71% 26% 74% 29%;
+  }
+  20% {
+    border-radius: 37% 63% 32% 68% / 71% 32% 68% 29%;
+  }
+  30% {
+    border-radius: 50% 50% 32% 68% / 71% 42% 58% 29%;
+  }
+  40% {
+    border-radius: 50% 50% 44% 56% / 59% 42% 58% 41%;
+  }
+  50% {
+    border-radius: 50% 50% 55% 45% / 48% 54% 46% 52%;
+  }
+  60% {
+    border-radius: 62% 38% 63% 37% / 38% 63% 37% 62%;
+  }
+  70% {
+    border-radius: 70% 30% 63% 37% / 38% 73% 27% 62%;
+  }
+  80% {
+    border-radius: 76% 24% 70% 30% / 29% 73% 27% 71%;
+  }
+  90% {
+    border-radius: 59% 41% 51% 49% / 43% 51% 49% 57%;
+  }
+  100% {
+    // border-radius: 52% 48% 51% 49% / 50% 50% 50% 50%;
+    // border-radius: 23% 77% 31% 69% / 67% 37% 63% 33%;
+    border-radius: 25% 75% 20% 80% / 77% 26% 74% 23%;
   }
 }

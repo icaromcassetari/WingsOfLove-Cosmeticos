@@ -102,10 +102,10 @@ const listaPerfumes = ref([
 ])
 </script>
 <template>
-  <div class="container h-100v">
+  <div class="container">
     <div class="row mb-3">
       <div class="col">
-        <h1 class="text-center text-muted fw-light">PERFUMES</h1>
+        <h1 class="text-center text-white fw-light">PERFUMES</h1>
       </div>
     </div>
     <div class="row ">
@@ -151,29 +151,32 @@ const listaPerfumes = ref([
     <div class="row mb-4 mt-4">
       <small class="d-block text-center text-dark fw-bold">*A Wings of Love Cosméticos não possui conexão de qualquer natureza com as marcas citadas abaixo, sendo elas, de propriedade das respectivas empresas.*</small>
     </div>
-    <div class="row v-100h">
-      <div class="col-12 col-md-3 mb-4 d-flex"
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-6 col-md-3 grid-perfumes mb-4 d-flex"
         v-for="(valueListaPerfumes , indexListaPerfumes ) in listaPerfumes"
         :key="indexListaPerfumes"
       >
         <div class="card card-perfumes border-0 rounded-0 p-3 w-100 ">
           <div class="card-header card-perfumes-header border-0 bg-white shadow d-flex align-items-center justify-content-center">
-            <img :src="valueListaPerfumes.image" class="img-fluid img-card-perfume" :alt="valueListaPerfumes.nome" style="max-height: 230px;">
+            <img :src="valueListaPerfumes.image" class="img-fluid img-card-perfume" :alt="valueListaPerfumes.nome" style="max-height: 100px;">
           </div>
           <div class="card-body border-0 bg-transparent  card-perfumes-body">
-            <p class="text-muted fw-bold text-animation">{{ valueListaPerfumes.nome }}</p>
-            <small class="text-muted text-animation">{{ valueListaPerfumes.descricao }}</small>
+            <p style="font-size: 14px" class="text-muted fw-bold text-animation mb-2 text-center">{{ valueListaPerfumes.nome }}</p>
+            <small style="font-size: 12px" class="text-muted text-animation">{{ valueListaPerfumes.descricao }}</small>
 
-            <p class="text-danger d-none text-animation-notas fw-bold mb-5">NOTAS</p>
-            <p class="text-muted d-none text-animation-notas fw-bold mb-0">Topo</p>
-            <p class="text-dark d-none text-animation-notas">{{ valueListaPerfumes.NotasTopo }}</p>
-            <p class="text-muted d-none text-animation-notas fw-bold mb-0">Coração</p>
-            <p class="text-dark d-none text-animation-notas">{{ valueListaPerfumes.NotasTopo }}</p>
-            <p class="text-muted d-none text-animation-notas fw-bold mb-0">Fundo</p>
-            <p class="text-dark d-none text-animation-notas">{{ valueListaPerfumes.NotasTopo }}</p>
+            <p style="font-size: 12px" class="text-danger d-none text-animation-notas fw-bold mb-2">NOTAS</p>
+            <p style="font-size: 12px" class="text-muted d-none text-animation-notas fw-bold mb-0">Topo</p>
+            <p style="font-size: 12px" class="text-dark d-none text-animation-notas">{{ valueListaPerfumes.NotasTopo }}</p>
+            <p style="font-size: 12px" class="text-muted d-none text-animation-notas fw-bold mb-0">Coração</p>
+            <p style="font-size: 12px" class="text-dark d-none text-animation-notas">{{ valueListaPerfumes.NotasTopo }}</p>
+            <p style="font-size: 12px" class="text-muted d-none text-animation-notas fw-bold mb-0">Fundo</p>
+            <p style="font-size: 12px" class="text-dark d-none text-animation-notas">{{ valueListaPerfumes.NotasTopo }}</p>
           </div>
         </div>
       </div>
     </div>
   </div>
+
 </template>

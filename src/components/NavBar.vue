@@ -3,7 +3,7 @@
 import logo from '@/assets/imagens/logo-semtexto.png'
 </script>
 <template>
-  <BNavbar :toggleable="'lg'" variant="transparent" container fixed="top" class="blur">
+  <BNavbar :toggleable="'lg'" variant="barra" container fixed="top" class="blur">
     <BNavbarBrand href="#">
       <img :src="logo" alt="Logo Wings Of Love" style="width: 80px" class="text-white" />
     </BNavbarBrand>
