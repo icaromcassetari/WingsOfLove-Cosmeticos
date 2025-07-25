@@ -102,10 +102,10 @@ const listaPerfumes = ref([
 ])
 </script>
 <template>
-  <div class="container">
+  <div class="container py-5">
     <div class="row mb-3">
       <div class="col">
-        <h1 class="text-center text-white fw-light">PERFUMES</h1>
+        <h1 class="text-center text-white fw-light MB-5">PERFUMES</h1>
       </div>
     </div>
     <div class="row ">
@@ -113,7 +113,7 @@ const listaPerfumes = ref([
         <BDropdown
           text="CATEGORIAS"
           class="mt-2 p-0 text-muted"
-          variant="danger shadow  w-100 rounded-0 btn-lg fw-bold"
+          variant="light  w-100 rounded-0 btn-lg fw-bold"
         >
           <BDropdownItem>Cítricos</BDropdownItem>
           <BDropdownItem>Frutas, Vegetais e Nozes</BDropdownItem>
@@ -131,10 +131,10 @@ const listaPerfumes = ref([
         </BDropdown>
       </div>
       <div class="col-12 col-md-10">
-        <BInputGroup class="mt-2 shadow">
+        <BInputGroup class="mt-2 ">
           <template #prepend>
-            <BInputGroupText class="border-0 rounded-0 bg-danger"
-              ><searchHealtIcon class="text-white"
+            <BInputGroupText class="border-0 rounded-0 bg-light"
+              ><searchHealtIcon class="text-dark"
             /></BInputGroupText>
           </template>
           <input
@@ -143,36 +143,42 @@ const listaPerfumes = ref([
             class="form-control form-control-lg border-white rounded-0"
           />
           <template #append>
-            <BButton variant="danger rounded-0 fw-bold border-0">BUSCAR</BButton>
+            <BButton variant="light rounded-0 fw-bold border-0">BUSCAR</BButton>
           </template>
         </BInputGroup>
       </div>
     </div>
-    <div class="row mb-4 mt-4">
+    <div class="row  mt-4">
       <small class="d-block text-center text-dark fw-bold">*A Wings of Love Cosméticos não possui conexão de qualquer natureza com as marcas citadas abaixo, sendo elas, de propriedade das respectivas empresas.*</small>
     </div>
   </div>
   <div class="container">
-    <div class="row">
-      <div class="col-6 col-md-3 grid-perfumes mb-4 d-flex"
+    <div class="row mt-2">
+      <div class="grid-perfumes mb-4 d-flex"
         v-for="(valueListaPerfumes , indexListaPerfumes ) in listaPerfumes"
         :key="indexListaPerfumes"
       >
-        <div class="card card-perfumes border-0 rounded-0 p-3 w-100 ">
-          <div class="card-header card-perfumes-header border-0 bg-white shadow d-flex align-items-center justify-content-center">
+        <div class="card card-perfumes">
+          <div class="card-header card-perfumes-header border-0 bg-white shadow mt-2 d-flex align-items-center justify-content-center" >
             <img :src="valueListaPerfumes.image" class="img-fluid img-card-perfume" :alt="valueListaPerfumes.nome" style="max-height: 100px;">
+            <!-- <div class="d-block">
+              <p style="font-size: 12px" class="text-muted d-none text-animation-notas fw-bold mb-0">Topo</p>
+              <p style="font-size: 12px" class="text-dark d-none text-animation-notas mb-1">{{ valueListaPerfumes.NotasTopo }}</p>
+              <p style="font-size: 12px" class="text-muted d-none text-animation-notas fw-bold mb-0">Coração</p>
+              <p style="font-size: 12px" class="text-dark d-none text-animation-notas mb-1">{{ valueListaPerfumes.NotasTopo }}</p>
+              <p style="font-size: 12px" class="text-muted d-none text-animation-notas fw-bold mb-0">Fundo</p>
+              <p style="font-size: 12px" class="text-dark d-none text-animation-notas mb-0">{{ valueListaPerfumes.NotasTopo }}</p>
+            </div> -->
           </div>
           <div class="card-body border-0 bg-transparent  card-perfumes-body">
             <p style="font-size: 14px" class="text-muted fw-bold text-animation mb-2 text-center">{{ valueListaPerfumes.nome }}</p>
             <small style="font-size: 12px" class="text-muted text-animation">{{ valueListaPerfumes.descricao }}</small>
 
-            <p style="font-size: 12px" class="text-danger d-none text-animation-notas fw-bold mb-2">NOTAS</p>
-            <p style="font-size: 12px" class="text-muted d-none text-animation-notas fw-bold mb-0">Topo</p>
-            <p style="font-size: 12px" class="text-dark d-none text-animation-notas">{{ valueListaPerfumes.NotasTopo }}</p>
-            <p style="font-size: 12px" class="text-muted d-none text-animation-notas fw-bold mb-0">Coração</p>
-            <p style="font-size: 12px" class="text-dark d-none text-animation-notas">{{ valueListaPerfumes.NotasTopo }}</p>
-            <p style="font-size: 12px" class="text-muted d-none text-animation-notas fw-bold mb-0">Fundo</p>
-            <p style="font-size: 12px" class="text-dark d-none text-animation-notas">{{ valueListaPerfumes.NotasTopo }}</p>
+          </div>
+          <div class="card-footer p-0 border-0">
+            <button class="btn btn-danger w-100 rounded-0 fw-bold shadow-sm border-0 btn-perfumes">
+                VER NOTAS
+            </button>
           </div>
         </div>
       </div>

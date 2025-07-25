@@ -38,26 +38,28 @@ import logo from '@/assets/imagens/logo-semtexto.png'
 </script>
 <template>
   <div class="container open-animation-top">
-    <div class="row align-items-center h-100v">
-      <div class="col-12 col-md-6 d-flex justify-content-center">
-        <img :src="logo" alt="Logo Wings Of Love" class="img-fluid" />
+    <div class="row align-items-center h-100v justify-content-center">
+      <div class="col-12 col-md-5 d-flex justify-content-center">
+        <img :src="logo" alt="Logo Wings Of Love" class="img-fluid ms-4" />
       </div>
       <div class="col-12 col-md-6">
         <div class="container">
-          <h1 class="text-muted text-center fw-bold" style="font-size: 6.35rem">
-            Wings <span class="text-danger text-decoration">Of</span><br />Love
+          <h1 class="text-muted text-start fw-bold" style="font-size: 6.35rem">
+            Wings <span class="text-danger text-decoration">Of</span><br />
+          </h1>
+          <h1 class="text-muted text-start fw-bold" style="font-size: 6.35rem">Love
           </h1>
           <!-- <hr
             width="20%"
             class="border border-danger border-5 rounded ms-auto me-auto my-5 is-hr"
           /> -->
-          <h4 class="text-white mt-5 fw-lighter">
+          <h4 class="text-light mt-5 fw-lighter">
             Sinta esse cheiro de
             <span class="text-danger text-decoration-underline fw-bold">AMOR</span> no ar.
             <br />
             E encontre a fragrâncias que mais combina com você.
           </h4>
-          <button class="btn btn-danger fw-bold btn-lg mt-3 w-100 rounded-0 shadow">
+          <button class="btn btn-danger fw-bold btn-lg mt-4 w-100 rounded-0 shadow">
             PEÇA JÁ O SEU
           </button>
         </div>

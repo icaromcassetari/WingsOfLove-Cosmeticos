@@ -44,8 +44,13 @@ body {
 }
 
 .fundo-produtos {
-  background: linear-gradient(180deg, #da90a7 0%, #e08688 100%);
+  background-color: #e08688;
+  /* background: linear-gradient(180deg, #da90a7 0%, #e08688 100%); */
   /* hsl(340 52% 72% 1) */
+}
+
+.fundo-sobrenos {
+  background: linear-gradient(180deg, #da90a7 0%, #e08688 100%);
 }
 
 .fundo-contato {
@@ -93,13 +98,13 @@ body {
 .bg-barra {
   background-color: rgb(248 249 250 / 50%);
 }
-.navbar-nav .nav-link.active {
+/* .navbar-nav .nav-link.active {
   color: rgb(80, 80, 80) !important;
 }
 
 .navbar-nav .nav-link {
   color: #dc3545 !important;
-}
+} */
 
 .btn-dark-primary {
   background-color: #37373d !important;
@@ -112,69 +117,39 @@ body {
 }
 
 .card-perfumes-body {
-  transition: 300ms ease-in-out;
   height: 45%;
+  padding: 0px !important;
+  margin-top: 100px !important;
 }
 
 .card-perfumes-header {
-  transition: 300ms ease-in-out;
-  /* height: 55% !important; */
-  /* border-bottom-left-radius: 20px !important;
-  border-top-left-radius: 100px !important;
-  border-top-right-radius: 20px !important;
-  border-bottom-right-radius: 100px !important; */
-  border-radius: 25px !important;
-  /* box-shadow: 15px 15px 12px -5px #dc4a5b !important; */
-  position: relative;
-  /* width: 90% !important; */
+  border-radius: 35% 35% 35% 35% / 35% 35% 35% 35% !important;
+  position: absolute;
+  z-index: 0;
+  top: -290px;
+  left: 53px;
   align-self: anchor-center !important;
-  /* padding: 10px !important; */
+
+  /* padding: 0px !important; */
 }
 
 .img-card-perfume {
-  /* border-bottom-left-radius: 20px !important;
-  border-top-left-radius: 100px !important;
-  border-top-right-radius: 20px !important;
-  border-bottom-right-radius: 100px !important; */
-}
-
-.card-perfumes:hover .card-perfumes-body {
-  height: 100%;
-}
-
-.card-perfumes:hover .card-perfumes-header {
-  height: 0px !important;
-  position: unset;
-  padding: 0px !important;
-  margin: 0px !important;
-}
-
-.card-perfumes:hover .img-card-perfume {
-  height: 0px !important;
-  width: 0px !important;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .card-perfumes {
   display: inline-flex;
   height: 100%;
+  margin-top: auto;
   min-height: 350px;
   background-color: rgb(248 249 250 / 50%) !important;
-}
-
-.grid-perfumes {
-  /* width: 20%; */
-}
-
-.card-perfumes:hover .text-animation {
-  display: none;
-}
-
-.card-perfumes:hover .text-animation-notas {
-  display: block !important;
+  border: 0px !important;
+  border-radius: 0px !important;
+  padding: 15px !important;
 }
 
 .border-misao {
-  /* border-radius: 23% 77% 31% 69% / 67% 37% 63% 33% !important; */
   background-color: #dc354594 !important;
   padding: 80px;
 }
@@ -182,4 +157,49 @@ body {
 .card-sobreImage {
   background-image: url('@/assets/imagens/PORTADA20FRAGANCIAS.png');
   background-size: cover;
+}
+
+.grid-perfumes {
+  display: grid;
+  width: 20% !important;
+  min-height: 380px;
+}
+
+.btn-perfumes {
+  display: none !important;
+  font-size: 12px !important;
+}
+
+.card-perfumes:hover .btn-perfumes {
+  display: block !important;
+}
+
+.bordered {
+  border-right: 1px solid #f1f1f1;
+  border-image: linear-gradient(to bottom, #da90a7 0%, white 25%, white 75%, #da90a7 100%) 1 stretch;
+}
+
+.border-efect-left {
+  width: 130px;
+  border: 2px solid rgb(255, 0, 0);
+  margin-left: 50%;
+  margin-right: auto;
+  /* border-radius: 0.95rem; */
+}
+
+.border-efect-rigth {
+  width: 130px;
+  border: 2px solid rgb(255, 0, 0);
+  margin-left: auto;
+  margin-right: 50%;
+  /* border-radius: 0.95rem; */
+}
+
+.img-sobre-nos {
+  min-height: 450px;
+  max-height: 450px;
+}
+
+.card-sobre-nos {
+  background-color: rgb(248 249 250 / 50%) !important;
 }
