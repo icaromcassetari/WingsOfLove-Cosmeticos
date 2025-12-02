@@ -6,11 +6,13 @@ import vue from '@vitejs/plugin-vue'
 import Components from 'unplugin-vue-components/vite'
 import { BootstrapVueNextResolver } from 'bootstrap-vue-next'
 import Icons from 'unplugin-icons/vite'
+import dsv from '@rollup/plugin-dsv'
 
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
+    dsv(),
     Components({
       resolvers: [BootstrapVueNextResolver()],
     }),

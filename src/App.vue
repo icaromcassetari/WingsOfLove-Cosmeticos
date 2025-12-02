@@ -2,7 +2,7 @@
 import NavBar from './components/NavBar.vue'
 import Banner from './components/BannerStart.vue'
 import Produtos from './components/ProdutosSale.vue'
-import SobreNos from './components/SobreNos.vue'
+// import SobreNos from './components/SobreNos.vue'
 import PerguntasFrequentes from './components/PerguntasFrequentes.vue'
 import FooterSite from './components/FooterSite.vue'
 if ('paintWorklet' in CSS) {
@@ -15,16 +15,16 @@ if ('paintWorklet' in CSS) {
   <section class="fundo-banner">
     <Banner></Banner>
   </section>
-   <section class="fundo-sobrenos">
+   <!-- <section class="fundo-sobrenos">
     <SobreNos></SobreNos>
-  </section>
-  <section class="fundo-produtos pb-5">
+  </section> -->
+  <section class="fundo-sobrenos fundo-produtos pb-5">
     <Produtos></Produtos>
   </section>
   <section class="fundo-produtos pb-5">
     <PerguntasFrequentes></PerguntasFrequentes>
   </section>
-  <section class="bg-dark pb-2">
+  <section class="fundo-footer pb-2 paralax">
     <FooterSite></FooterSite>
   </section>
 

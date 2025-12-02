@@ -49,6 +49,14 @@ body {
   /* hsl(340 52% 72% 1) */
 }
 
+.fundo-footer {
+  background: linear-gradient(180deg, #e08688 0%, #df6b6d 100%);
+  /* background-image: url('./imagens/fundoBanner2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+}
+
 .fundo-sobrenos {
   background: linear-gradient(180deg, #da90a7 0%, #e08688 100%);
 }
@@ -215,4 +223,41 @@ body {
 
 .start-text-resposta {
   margin-left: 8%;
+}
+
+.dropdown-menu {
+  width: -webkit-fill-available !important;
+}
+
+.border-efect-large {
+  width: auto;
+  border: 2px solid rgb(255, 0, 0);
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.border-efect-normal {
+  width: auto;
+  border: 2px solid rgb(255, 0, 0);
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.border-efect-medium {
+  width: auto;
+  border: 2px solid rgb(255, 0, 0);
+  margin-left: 30%;
+  margin-right: 30%;
+}
+
+.card-footer {
+  background: rgb(248 249 250 / 10%) !important;
+}
+
+.xl-small {
+  font-size: 0.6rem;
+}
+
+.border-end-muted {
+  border-right: 1px solid #21252940;
 }

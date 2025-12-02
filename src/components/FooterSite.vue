@@ -1,40 +1,63 @@
 <script setup>
 import logo from '@/assets/imagens/logo-semtexto.png'
+import IconPhone from "@/assets/icons/IconPhone.vue"
+import IconEmail from "@/assets/icons/IconEmail.vue"
+import IconInsta from "@/assets/icons/IconInsta.vue"
 </script>
 <template>
   <div class="container pt-5">
-    <div class="row">
+    <div class="row ">
+      <div class="col d-flex align-items-center justify-content-center">
+          <img :src="logo" alt="Logo Wings Of Love" style="width: 300px" class="text-white" />
+      </div>
+    </div>
+    <!-- <hr class="mb-2 border-efect-normal mt-3 " >
+    <hr class="mb-2 border-efect-large mt-2" >
+    <hr class="mb-4 border-efect-medium mt-2 " > -->
+    <h4 class="text-center text-muted fw-bold mb-5 mt-5">A Wings Of Love agradeçe sua visita.</h4>
+    <hr class="text-muted">
+    <div class="row justify-content-center">
       <div class="col">
-        <div class="row">
-          <div class="col d-flex align-items-center">
-            <img :src="logo" alt="Logo Wings Of Love" style="width: 180px" class="text-white" />
-          </div>
-          <div class="col">
-              <a href="#home" class="text-light d-block">Home</a>
-              <a href="#sobreNos" class="text-light d-block">Sobre Nós</a>
-              <a href="#perfumes" class="text-light d-block">Perfumes</a>
-              <a href="#perguntas" class="text-light d-block">Perfumes</a>
+        <h3 class="text-center text-muted fw-light mb-5 mt-4">CONTATOS</h3>
+        <div class="card rounded-0 border-0 card-footer p-5">
+          <div class="card-body border-0 rounded-0 p-5">
+            <div class="row">
+              <div class="col border-end-muted ">
+                <div class="row">
+                  <div class="col-auto d-flex align-items-center">
+                    <IconPhone style="height: 30px; width: 30px"  class="text-muted"  />
+                  </div>
+                  <div class="col">
+                      <p class="text-muted m-0">(11) 94564876</p>
+                      <small class="xl-small">ICARO BUNDÃO</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col border-end-muted">
+                <div class="row">
+                  <div class="col-auto d-flex align-items-center">
+                    <IconPhone style="height: 30px; width: 30px"  class="text-muted" />
+                  </div>
+                  <div class="col">
+                    <p class="text-muted m-0">(11) 94564876</p>
+                    <small class="xl-small">(REVENDEDORA)</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col d-flex align-items-center border-end-muted">
+                <p class="text-muted text-center m-0">
+                  <IconEmail style="height: 30px; width: 30px" class="text-muted"/>
+                  teste@wmailcom.com.br
+                </p>
+              </div>
+              <div class="col d-flex align-items-center ">
+                <button class="p-0 btn btn-transparent text-muted shadow-0">
+                    <IconInsta style="height: 30px; width: 30px" /> @wingsOfLove
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-
-      </div>
-      <div class="col">
-        <p class="text-light">CONTATOS.</p>
-        <p class="text-danger mt-2 mb-0"> +55 11 94564876</p>
-        <p class="text-danger"> +55 11 94564876</p>
-        <p class="text-danger"> email@wmailcom.com.br</p>
-      </div>
-      <div class="col">
-        <p class="text-light">REDES SOCIAIS.</p>
-        <p class="text-light mt-2 mb-0"> +55 11 94564876</p>
-        <p class="text-light"> +55 11 94564876</p>
-        <p class="text-light"> email@wmailcom.com.br</p>
-      </div>
-      <div class="col">
-        <p class="text-light">FORMAS DE PAGAMENTOS.</p>
-        <p class="text-light mt-2 mb-0"> +55 11 94564876</p>
-        <p class="text-light"> +55 11 94564876</p>
-        <p class="text-light"> email@wmailcom.com.br</p>
       </div>
     </div>
   </div>

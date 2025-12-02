@@ -53,7 +53,7 @@ import logo from '@/assets/imagens/logo-semtexto.png'
             width="20%"
             class="border border-danger border-5 rounded ms-auto me-auto my-5 is-hr"
           /> -->
-          <h4 class="text-light mt-5 fw-lighter">
+          <h4 class="text-muted mt-5 fw-lighter">
             Sinta esse cheiro de
             <span class="text-danger text-decoration-underline fw-bold">AMOR</span> no ar.
             <br />

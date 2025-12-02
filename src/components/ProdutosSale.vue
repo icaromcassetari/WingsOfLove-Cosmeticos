@@ -1,136 +1,80 @@
 <script setup>
+
 import searchHealtIcon from '@/assets/icons/searchHealt.vue'
-import Aventus from "@/assets/imagens/perfumes/Aventus.jpg"
-import MillionElixir from "@/assets/imagens/perfumes/1MillionElixir.jpg"
-import Verde from "@/assets/imagens/perfumes/Verde.jpg"
-import BrancoPrata from "@/assets/imagens/perfumes/brancoPrata.jpg"
-import TobaccoVanille from "@/assets/imagens/perfumes/TobaccoVanille.jpg"
-import InvictusVictory from "@/assets/imagens/perfumes/InvictusVictory.png"
+import { ref } from 'vue';
+import axios from 'axios'
 
-import { ref } from 'vue'
+const listaProdutos = ref([]);
+const categoria = ref(null);
+const pesquisa = ref(null);
 
-const listaPerfumes = ref([
-  {
-    nameReal: 'Aventus Creed',
-    nome: 'CRI Ventus M.',
-    descricao:
-      'Aventus de Creed é um perfume Chipre Frutado Masculino. Aventus foi lançada em 2010. Aventus foi criado por Jean-Christophe Hérault e Erwin Creed.',
-    Genero: 'Masculino',
-    NotasTopo: 'Bergamota, Groselha Preta, Maçã, Limão e Pimenta Rosa',
-    NotasCoracao: 'Abacaxi, Patchouli e Jasmim Marroquino',
-    NotasFundo: 'Vidoeiro, Almíscar, Musgo de Carvalho, Ambroxan e Cedro',
-    image : Aventus
-  },
-  {
-    nameReal: '1 Million Elixir',
-    nome: 'PR 1 MILHÃO ELIXIR M.',
-    descricao:
-      '1 Million Elixir de Rabanne é um perfume Amadeirado Aromático Masculino. Esta é uma nova fragrância. 1 Million Elixir foi lançada em 2022.',
-    Genero: 'Masculino',
-    NotasTopo: 'Maçã e Davana',
-    NotasCoracao: 'Rosa Damascena, Cedro e Osmanthus',
-    NotasFundo: 'Absoluto de Baunilha, Fava Tonka e Patchouli',
-    image : MillionElixir
-  },
-  {
-    nameReal: 'King',
-    nome: 'BHA KING BARAR M.',
-    descricao:
-      'King de Bharara é um perfume Aromático Masculino. King foi lançada em 2021.',
-    Genero: 'Masculino',
-    NotasTopo: 'Laranja, Limão e Bergamota',
-    NotasCoracao: 'Notas Frutadas',
-    NotasFundo: 'Baunilha, Almíscar Branco e Âmbar',
-    image: Verde
-  },
-  {
-    nameReal: 'Godolphin',
-    nome: 'MAR GODIFI M.',
-    descricao:
-      'King de Bharara é um perfume Aromático Masculino. King foi lançada em 2021.',
-    Genero: 'Masculino',
-    NotasTopo: 'Notas Frutadas, Açafrão, Mate, Tomilho, Cipreste e Notas Verdes',
-    NotasCoracao: 'Rosa, Raíz de Orris e Jasmim',
-    NotasFundo: 'Couro, Âmbar, Cedro da Virgínia, Vetiver, Almíscar e Baunilha',
-    image : BrancoPrata
-  },
-  {
-    nameReal: 'Tobacco Vanille',
-    nome: 'TFC TABACO VANILA',
-    descricao:
-      'Tobacco Vanille de Tom Ford é um perfume Oriental Especiado Compartilhável. Tobacco Vanille foi lançada em 2007. O perfumista que assina esta fragrância é Olivier Gillotin.',
-    Genero: 'Unissex',
-    NotasTopo: 'Folha de Tabaco e Notas Especiadas',
-    NotasCoracao: 'Baunilha, Cacau, Fava Tonka e Flor de Tabaco',
-    NotasFundo: 'Frutas Secas e Notas Amadeiradas',
-    image : TobaccoVanille
-  },
-  {
-    nameReal: 'Invictus Victory',
-    nome: 'INVENC VICTOR M.',
-    descricao:
-      'Invictus Victory de Rabanne é um perfume Oriental Masculino. Invictus Victory foi lançada em 2021.',
-    Genero: 'Masculino',
-    NotasTopo: 'Pimenta Rosa e Limão',
-    NotasCoracao: 'Olíbano e Lavanda',
-    NotasFundo: 'Baunilha, Fava Tonka e Âmbar',
-    image: InvictusVictory
-  },
-  {
-    nameReal: '1 Million Elixir',
-    nome: 'PR 1 MILHÃO ELIXIR M.',
-    descricao:
-      '1 Million Elixir de Rabanne é um perfume Amadeirado Aromático Masculino. Esta é uma nova fragrância. 1 Million Elixir foi lançada em 2022.',
-    Genero: 'Masculino',
-    NotasTopo: 'Maçã e Davana',
-    NotasCoracao: 'Rosa Damascena, Cedro e Osmanthus',
-    NotasFundo: 'Absoluto de Baunilha, Fava Tonka e Patchouli',
-    image : MillionElixir
-  },
-  {
-    nameReal: 'King',
-    nome: 'BHA KING BARAR M.',
-    descricao:
-      'King de Bharara é um perfume Aromático Masculino. King foi lançada em 2021.',
-    Genero: 'Masculino',
-    NotasTopo: 'Laranja, Limão e Bergamota',
-    NotasCoracao: 'Notas Frutadas',
-    NotasFundo: 'Baunilha, Almíscar Branco e Âmbar',
-    image: Verde
-  },
+const params = ref({
+  categoria : categoria.value,
+  pesquisa: pesquisa.value
+})
 
-])
+const fetchLista = () => {
+
+  params.value = {
+    categoria : categoria.value,
+    pesquisa: pesquisa.value
+  }
+
+  axios.post("http://localhost/dev/backendWings/processarLista.php", params.value ).then((event) => {
+    listaProdutos.value = event.data
+  })
+
+}
+
+const setCategoria = (event) => {
+  categoria.value = event.target.value
+}
+
+fetchLista()
+
 </script>
 <template>
   <div class="container py-5">
     <div class="row mb-3">
       <div class="col">
-        <h1 class="text-center text-white fw-light MB-5">PERFUMES</h1>
+        <h1 class="text-center text-muted fw-light MB-5">PERFUMES</h1>
       </div>
     </div>
     <div class="row ">
-      <div class="col col-md-2">
+      <div class="col col-md-4">
         <BDropdown
-          text="CATEGORIAS"
+          :text="'Categoria ' + (categoria != null ? categoria : '')"
           class="mt-2 p-0 text-muted"
           variant="light  w-100 rounded-0 btn-lg fw-bold"
+          @click="setCategoria"
+          size="lg"
         >
-          <BDropdownItem>Cítricos</BDropdownItem>
-          <BDropdownItem>Frutas, Vegetais e Nozes</BDropdownItem>
-          <BDropdownItem>Flores</BDropdownItem>
-          <BDropdownItem>Flores Brancas</BDropdownItem>
-          <BDropdownItem>Plantas, Ervas e Fougéres</BDropdownItem>
-          <BDropdownItem>Especiarias</BDropdownItem>
-          <BDropdownItem>Doces e Aromas Gourmets</BDropdownItem>
-          <BDropdownItem>Madeira & Musgos</BDropdownItem>
-          <BDropdownItem>Resinas & Bálsamos</BDropdownItem>
-          <BDropdownItem>Musk, Âmbares e Animálicas</BDropdownItem>
-          <BDropdownItem>Bebidas</BDropdownItem>
-          <BDropdownItem>Naturais & Sintéticas</BDropdownItem>
-          <BDropdownItem>Não categorizado</BDropdownItem>
+          <BDropdownItem  value="Cítricos">Cítricos</BDropdownItem>
+          <BDropdownItem  value="Frutas">Frutas</BDropdownItem>
+          <BDropdownItem  value="Vegetais">Vegetais</BDropdownItem>
+          <BDropdownItem  value="Nozes">Nozes</BDropdownItem>
+          <BDropdownItem  value="Flores">Flores</BDropdownItem>
+          <BDropdownItem  value="Flores Brancas">Flores Brancas</BDropdownItem>
+          <BDropdownItem  value="Plantas">Plantas</BDropdownItem>
+          <BDropdownItem  value="Ervas">Ervas</BDropdownItem>
+          <BDropdownItem  value="Fougéres">Fougéres</BDropdownItem>
+          <BDropdownItem  value="Especiarias">Especiarias</BDropdownItem>
+          <BDropdownItem  value="Doces">Doces</BDropdownItem>
+          <BDropdownItem  value="Aromas Gourmets">Aromas Gourmets</BDropdownItem>
+          <BDropdownItem  value="Madeira">Madeira</BDropdownItem>
+          <BDropdownItem  value="Musgos">Musgos</BDropdownItem>
+          <BDropdownItem  value="Resinas">Resinas</BDropdownItem>
+          <BDropdownItem  value="Bálsamos">Bálsamos</BDropdownItem>
+          <BDropdownItem  value="Musk">Musk</BDropdownItem>
+          <BDropdownItem  value="Âmbares">Âmbares</BDropdownItem>
+          <BDropdownItem  value="Animálicas">Animálicas</BDropdownItem>
+          <BDropdownItem  value="Bebidas">Bebidas</BDropdownItem>
+          <BDropdownItem  value="Naturais">Naturais</BDropdownItem>
+          <BDropdownItem  value="Sintéticas">Sintéticas</BDropdownItem>
+          <BDropdownItem  value="">Não categorizado</BDropdownItem>
         </BDropdown>
       </div>
-      <div class="col-12 col-md-10">
+      <div class="col">
         <BInputGroup class="mt-2 ">
           <template #prepend>
             <BInputGroupText class="border-0 rounded-0 bg-light"
@@ -141,26 +85,27 @@ const listaPerfumes = ref([
             type="text"
             placeholder="Pesquisar"
             class="form-control form-control-lg border-white rounded-0"
+            v-model="pesquisa"
           />
           <template #append>
-            <BButton variant="light rounded-0 fw-bold border-0">BUSCAR</BButton>
+            <BButton variant="light rounded-0 fw-bold border-0" @click="fetchLista">BUSCAR</BButton>
           </template>
         </BInputGroup>
       </div>
     </div>
     <div class="row  mt-4">
-      <small class="d-block text-center text-dark fw-bold">*A Wings of Love Cosméticos não possui conexão de qualquer natureza com as marcas citadas abaixo, sendo elas, de propriedade das respectivas empresas.*</small>
+      <small class="d-block text-center text-danger fw-bold">*A Wings of Love Cosméticos não possui conexão de qualquer natureza com as marcas citadas abaixo, sendo elas, de propriedade das respectivas empresas.*</small>
     </div>
   </div>
   <div class="container">
     <div class="row mt-2">
       <div class="grid-perfumes mb-4 d-flex"
-        v-for="(valueListaPerfumes , indexListaPerfumes ) in listaPerfumes"
+        v-for="(valueListaPerfumes , indexListaPerfumes ) in listaProdutos"
         :key="indexListaPerfumes"
       >
         <div class="card card-perfumes">
           <div class="card-header card-perfumes-header border-0 bg-white shadow mt-2 d-flex align-items-center justify-content-center" >
-            <img :src="valueListaPerfumes.image" class="img-fluid img-card-perfume" :alt="valueListaPerfumes.nome" style="max-height: 100px;">
+            <img :src="valueListaPerfumes.image" class="img-fluid img-card-perfume" :alt="valueListaPerfumes.nome_comercial" style="max-height: 100px;">
             <!-- <div class="d-block">
               <p style="font-size: 12px" class="text-muted d-none text-animation-notas fw-bold mb-0">Topo</p>
               <p style="font-size: 12px" class="text-dark d-none text-animation-notas mb-1">{{ valueListaPerfumes.NotasTopo }}</p>
@@ -171,9 +116,8 @@ const listaPerfumes = ref([
             </div> -->
           </div>
           <div class="card-body border-0 bg-transparent  card-perfumes-body">
-            <p style="font-size: 14px" class="text-muted fw-bold text-animation mb-2 text-center">{{ valueListaPerfumes.nome }}</p>
+            <p style="font-size: 14px" class="text-muted fw-bold text-animation mb-2 text-center">{{ valueListaPerfumes.nome_comercial }}</p>
             <small style="font-size: 12px" class="text-muted text-animation">{{ valueListaPerfumes.descricao }}</small>
-
           </div>
           <div class="card-footer p-0 border-0">
             <button class="btn btn-danger w-100 rounded-0 fw-bold shadow-sm border-0 btn-perfumes">
