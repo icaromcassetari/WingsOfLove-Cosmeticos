@@ -5,10 +5,6 @@
   max-height: 2.85rem !important;
 } */
 
-body {
-  background-color: rgb(55 55 61) !important;
-}
-
 .open-animation-top {
   animation-name: topOpen;
   animation-duration: 1s;
@@ -41,24 +37,37 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-blend-mode: luminosity;
 }
 
-.fundo-produtos {
+.fundo-perguntas {
   background-color: #e08688;
-  /* background: linear-gradient(180deg, #da90a7 0%, #e08688 100%); */
-  /* hsl(340 52% 72% 1) */
+  background-image:
+    url('@/assets/imagens/elefanteVoador.png'), url('@/assets/imagens/elefanteSentado.png');
+  background-blend-mode: luminosity;
+  /* background-size: contain; */
+  background-repeat: no-repeat;
+  background-position:
+    right top,
+    left bottom;
 }
 
 .fundo-footer {
-  background: linear-gradient(180deg, #e08688 0%, #df6b6d 100%);
-  /* background-image: url('./imagens/fundoBanner2.jpg');
+  background-color: #e08688;
+  background-image: url('@/assets/imagens/desenhoMOtoLove.png');
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover; */
+  background-size: contain;
+  background-blend-mode: luminosity;
 }
 
-.fundo-sobrenos {
-  background: linear-gradient(180deg, #da90a7 0%, #e08688 100%);
+.fundo-produtos {
+  /* background: linear-gradient(180deg, #da90a7 0%, #e08688 100%); */
+  background-image:
+    url('@/assets/imagens/variosCoracoes.png'), linear-gradient(180deg, #da90a7 0%, #e08688 100%);
+  /* background-repeat: no-repeat; */
+  /* background-position: right; */
+  background-size: contain;
+  background-blend-mode: luminosity;
 }
 
 .fundo-contato {
@@ -251,13 +260,13 @@ body {
 }
 
 .card-footer {
-  background: rgb(248 249 250 / 10%) !important;
+  background: rgb(248 249 250 / 80%) !important;
 }
 
 .xl-small {
   font-size: 0.6rem;
 }
 
-.border-end-muted {
-  border-right: 1px solid #21252940;
+.border-end-dark {
+  border-right: 1px solid #000000;
 }

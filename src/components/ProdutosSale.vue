@@ -13,6 +13,11 @@ const params = ref({
   pesquisa: pesquisa.value
 })
 
+const currentPage = ref(1)
+const rows = ref(0)
+const perPage = ref(20)
+const listaTemp = ref([])
+
 const fetchLista = () => {
 
   params.value = {
@@ -21,14 +26,27 @@ const fetchLista = () => {
   }
 
   axios.post("http://localhost/dev/backendWings/processarLista.php", params.value ).then((event) => {
-    listaProdutos.value = event.data
+
+    rows.value = event.data.total
+    listaTemp.value =  event.data.data
+    listaTemp.value = Object.values(listaTemp.value);
+    var totalblocks = Math.ceil(rows.value / perPage.value)
+
+    for(var i = 1; i <= totalblocks; i++){
+      console.log(listaTemp.value.split(0,1))
+      // listaProdutos.value[i] = listaTemp.value.split(0,perPage)
+    }
+
+    console.log(listaProdutos.value)
+
   })
 
 }
 
-const setCategoria = (event) => {
-  categoria.value = event.target.value
+const getLista = () => {
+  return listaProdutos.value[currentPage]
 }
+
 
 fetchLista()
 
@@ -37,11 +55,11 @@ fetchLista()
   <div class="container py-5">
     <div class="row mb-3">
       <div class="col">
-        <h1 class="text-center text-muted fw-light MB-5">PERFUMES</h1>
+        <h1 class="text-center text-dark fw-light MB-5">PERFUMES</h1>
       </div>
     </div>
     <div class="row ">
-      <div class="col col-md-4">
+      <!-- <div class="col col-md-4">
         <BDropdown
           :text="'Categoria ' + (categoria != null ? categoria : '')"
           class="mt-2 p-0 text-muted"
@@ -73,7 +91,7 @@ fetchLista()
           <BDropdownItem  value="Sintéticas">Sintéticas</BDropdownItem>
           <BDropdownItem  value="">Não categorizado</BDropdownItem>
         </BDropdown>
-      </div>
+      </div> -->
       <div class="col">
         <BInputGroup class="mt-2 ">
           <template #prepend>
@@ -100,7 +118,7 @@ fetchLista()
   <div class="container">
     <div class="row mt-2">
       <div class="grid-perfumes mb-4 d-flex"
-        v-for="(valueListaPerfumes , indexListaPerfumes ) in listaProdutos"
+        v-for="(valueListaPerfumes , indexListaPerfumes ) in getLista"
         :key="indexListaPerfumes"
       >
         <div class="card card-perfumes">
@@ -127,6 +145,12 @@ fetchLista()
         </div>
       </div>
     </div>
-  </div>
+  </div>{{ currentPage }}
+  <BPagination
+    v-model="currentPage"
+    pills
+    :total-rows="rows"
+    :per-page="perPage"
+  />
 
 </template>
