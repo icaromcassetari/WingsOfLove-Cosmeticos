@@ -6,19 +6,60 @@ import IconInsta from "@/assets/icons/IconInsta.vue"
 </script>
 <template>
   <div class="container pt-5">
-    <div class="row ">
+    <div class="row">
       <div class="col d-flex align-items-center justify-content-center">
-          <img :src="logo" alt="Logo Wings Of Love" style="width: 300px" class="text-white" />
+          <img :src="logo" alt="Logo Wings Of Love" style="width: 350px" class="text-white" />
       </div>
     </div>
     <!-- <hr class="mb-2 border-efect-normal mt-3 " >
     <hr class="mb-2 border-efect-large mt-2" >
     <hr class="mb-4 border-efect-medium mt-2 " > -->
     <h4 class="text-center text-dark fw-bold mb-5 mt-5">A Wings Of Love agradeçe sua visita.</h4>
-    <hr class="text-dark" >
+    <!-- <hr class="text-dark" > -->
     <div class="row justify-content-center">
+      <div class="col col-md-4">
+        <div class="row">
+          <div class="col-auto d-flex align-items-center">
+            <IconPhone style="height: 35px; width: 35px"  class="text-dark"  />
+          </div>
+          <div class="col d-flex align-items-center">
+              <h5 class="text-dark m-0 fw-light">(11) 94564876 - ICARO BUNDÃO</h5>
+          </div>
+        </div>
+        <hr class="text-dark" >
+        <div class="row">
+          <div class="col-auto d-flex align-items-center">
+            <IconPhone style="height: 35px; width: 35px"  class="text-dark"  />
+          </div>
+          <div class="col d-flex align-items-center">
+              <h5 class="text-dark m-0 fw-light">(11) 94564876 - REVENDEDORA</h5>
+          </div>
+        </div>
+        <hr class="text-dark" >
+        <div class="row">
+          <div class="col-auto d-flex align-items-center">
+             <IconEmail style="height: 35px; width: 35px" class="text-dark"/>
+          </div>
+          <div class="col d-flex align-items-center">
+              <h5 class="text-dark m-0 fw-light">teste@teste.com.br</h5>
+          </div>
+        </div>
+        <hr class="text-dark" >
+        <div class="row">
+          <!-- <button class="p-0 btn btn-transparent text-dark shadow-0 w-100 text-start">
+              <IconInsta style="height: 30px; width: 30px" /> @wingsOfLove
+          </button> -->
+          <div class="col-auto d-flex align-items-center">
+            <IconInsta style="height: 35px; width: 35px" class="text-dark"/>
+          </div>
+          <div class="col d-flex align-items-center">
+              <h5 class="text-dark m-0 fw-light">@wingsOfLove</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="row justify-content-center">
       <div class="col">
-        <!-- <h3 class="text-center text-dark fw-light mb-5 mt-4">CONTATOS</h3> -->
         <div class="card rounded-0 border-0 card-footer p-5 shadow mt-5">
           <div class="card-body border-0 rounded-0 p-5">
             <div class="row">
@@ -59,6 +100,6 @@ import IconInsta from "@/assets/icons/IconInsta.vue"
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>

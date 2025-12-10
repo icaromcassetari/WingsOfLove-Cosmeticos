@@ -33,18 +33,14 @@ const fetchLista = () => {
     var totalblocks = Math.ceil(rows.value / perPage.value)
 
     for(var i = 1; i <= totalblocks; i++){
-      console.log(listaTemp.value.split(0,1))
-      // listaProdutos.value[i] = listaTemp.value.split(0,perPage)
+      listaProdutos.value[i] = listaTemp.value.splice(0,perPage.value)
     }
-
-    console.log(listaProdutos.value)
-
   })
 
 }
 
 const getLista = () => {
-  return listaProdutos.value[currentPage]
+  return listaProdutos.value[currentPage.value]
 }
 
 
@@ -118,39 +114,39 @@ fetchLista()
   <div class="container">
     <div class="row mt-2">
       <div class="grid-perfumes mb-4 d-flex"
-        v-for="(valueListaPerfumes , indexListaPerfumes ) in getLista"
+        v-for="(valueListaPerfumes , indexListaPerfumes ) in getLista()"
         :key="indexListaPerfumes"
       >
         <div class="card card-perfumes">
           <div class="card-header card-perfumes-header border-0 bg-white shadow mt-2 d-flex align-items-center justify-content-center" >
             <img :src="valueListaPerfumes.image" class="img-fluid img-card-perfume" :alt="valueListaPerfumes.nome_comercial" style="max-height: 100px;">
-            <!-- <div class="d-block">
-              <p style="font-size: 12px" class="text-muted d-none text-animation-notas fw-bold mb-0">Topo</p>
-              <p style="font-size: 12px" class="text-dark d-none text-animation-notas mb-1">{{ valueListaPerfumes.NotasTopo }}</p>
-              <p style="font-size: 12px" class="text-muted d-none text-animation-notas fw-bold mb-0">Coração</p>
-              <p style="font-size: 12px" class="text-dark d-none text-animation-notas mb-1">{{ valueListaPerfumes.NotasTopo }}</p>
-              <p style="font-size: 12px" class="text-muted d-none text-animation-notas fw-bold mb-0">Fundo</p>
-              <p style="font-size: 12px" class="text-dark d-none text-animation-notas mb-0">{{ valueListaPerfumes.NotasTopo }}</p>
-            </div> -->
           </div>
           <div class="card-body border-0 bg-transparent  card-perfumes-body">
-            <p style="font-size: 14px" class="text-muted fw-bold text-animation mb-2 text-center">{{ valueListaPerfumes.nome_comercial }}</p>
-            <small style="font-size: 12px" class="text-muted text-animation">{{ valueListaPerfumes.descricao }}</small>
+            <p style="font-size: 14px" class="text-dark fw-bold text-animation mb-3 text-center">{{ valueListaPerfumes.nome_comercial }}</p>
+            <small style="font-size: 12px" class="text-dark text-animation">{{ valueListaPerfumes.descricao }}</small>
           </div>
           <div class="card-footer p-0 border-0">
-            <button class="btn btn-danger w-100 rounded-0 fw-bold shadow-sm border-0 btn-perfumes">
-                VER NOTAS
+            <button class="btn btn-white btn-sm w-100 fw-bold text-danger shadow-sm">
+                VISUALIZAR
             </button>
           </div>
         </div>
       </div>
     </div>
-  </div>{{ currentPage }}
-  <BPagination
-    v-model="currentPage"
-    pills
-    :total-rows="rows"
-    :per-page="perPage"
-  />
+    <div class="row mt-4">
+      <div class="col d-flex justify-content-end">
+        <BPagination
+          v-model="currentPage"
+          pills
+          :total-rows="rows"
+          :per-page="perPage"
+          size="md"
+          first-class='dark'
+        />
+      </div>
+    </div>
+  </div>
+
+
 
 </template>

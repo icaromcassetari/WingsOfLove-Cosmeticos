@@ -49,15 +49,19 @@
   background-repeat: no-repeat;
   background-position:
     right top,
-    left bottom;
+    left center;
 }
 
 .fundo-footer {
   background-color: #e08688;
-  background-image: url('@/assets/imagens/desenhoMOtoLove.png');
+  background-image:
+    url('@/assets/imagens/desenhoMOtoLove.png'), url('@/assets/imagens/familiaFelizAmor.png');
   background-repeat: no-repeat;
   background-size: contain;
-  background-blend-mode: luminosity;
+  background-blend-mode: darken, luminosity;
+  background-position:
+    left center,
+    right center;
 }
 
 .fundo-produtos {
@@ -160,7 +164,7 @@
   height: 100%;
   margin-top: auto;
   min-height: 350px;
-  background-color: rgb(248 249 250 / 50%) !important;
+  background-color: rgb(248 249 250 / 60%) !important;
   border: 0px !important;
   border-radius: 0px !important;
   padding: 15px !important;
@@ -261,6 +265,7 @@
 
 .card-footer {
   background: rgb(248 249 250 / 80%) !important;
+  border-radius: 0rem !important;
 }
 
 .xl-small {
@@ -269,4 +274,17 @@
 
 .border-end-dark {
   border-right: 1px solid #000000;
+}
+
+page-link.active,
+.active > .page-link {
+  border: 1px solid white !important;
+  background-color: #db3b6b !important;
+}
+
+page-link,
+.page-link {
+  border: 1px solid white !important;
+  background-color: #db7d99 !important;
+  color: white !important;
 }
