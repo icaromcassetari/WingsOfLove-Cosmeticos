@@ -24,9 +24,10 @@ if ('paintWorklet' in CSS) {
   <section class="fundo-perguntas pb-5">
     <PerguntasFrequentes></PerguntasFrequentes>
   </section>
-  <section class="fundo-footer " style="min-height: 75vh;">
+  <section class="fundo-footer" style="min-height: 75vh;">
     <FooterSite></FooterSite>
-
+  </section>
+  <section class="fundo-footer-sub" style="min-height: 5vh;">
   </section>
 
 </template>

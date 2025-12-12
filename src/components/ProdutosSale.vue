@@ -51,10 +51,10 @@ fetchLista()
   <div class="container py-5">
     <div class="row mb-3">
       <div class="col">
-        <h1 class="text-center text-dark fw-light MB-5">PERFUMES</h1>
+        <h1 class="text-center text-dark fw-light mb-5">PRODUTOS</h1>
       </div>
     </div>
-    <div class="row ">
+    <div class="row mb-5">
       <!-- <div class="col col-md-4">
         <BDropdown
           :text="'Categoria ' + (categoria != null ? categoria : '')"

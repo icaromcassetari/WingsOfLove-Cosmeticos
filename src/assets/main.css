@@ -40,28 +40,127 @@
   background-blend-mode: luminosity;
 }
 
-.fundo-perguntas {
-  background-color: #e08688;
-  background-image:
-    url('@/assets/imagens/elefanteVoador.png'), url('@/assets/imagens/elefanteSentado.png');
-  background-blend-mode: luminosity;
-  /* background-size: contain; */
-  background-repeat: no-repeat;
-  background-position:
-    right top,
-    left center;
+@media only screen and (min-width: 200px) {
+  .grid-perfumes {
+    display: grid;
+    width: 100% !important;
+    min-height: 380px;
+  }
+
+  .card-perfumes-header {
+    border-radius: 35% 35% 35% 35% / 35% 35% 35% 35% !important;
+    position: absolute;
+    z-index: 0;
+    top: -300px;
+    left: 140px;
+    align-self: anchor-center !important;
+  }
+
+  .fundo-perguntas {
+    background-color: #e08688;
+    background-image:
+      url('@/assets/imagens/elefanteVoador.png'), url('@/assets/imagens/elefanteSentado.png');
+    background-blend-mode: luminosity;
+    background-repeat: no-repeat;
+    background-position:
+      center right,
+      bottom right;
+    background-size: 40%, 45%;
+  }
+
+  .fundo-footer {
+    background-color: #e08688;
+    background-image: url('@/assets/imagens/familiaFelizAmor.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-blend-mode: luminosity;
+    background-position: bottom;
+  }
 }
 
-.fundo-footer {
+@media only screen and (min-width: 600px) {
+  .grid-perfumes {
+    display: grid;
+    width: 100% !important;
+    min-height: 380px;
+  }
+
+  .card-perfumes-header {
+    border-radius: 35% 35% 35% 35% / 35% 35% 35% 35% !important;
+    position: absolute;
+    z-index: 0;
+    top: -300px;
+    left: 190px;
+    align-self: anchor-center !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .grid-perfumes {
+    display: grid;
+    width: 50% !important;
+    min-height: 380px;
+  }
+
+  .card-perfumes-header {
+    border-radius: 35% 35% 35% 35% / 35% 35% 35% 35% !important;
+    position: absolute;
+    z-index: 0;
+    top: -290px;
+    left: 100px;
+    align-self: anchor-center !important;
+
+    /* padding: 0px !important; */
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .fundo-footer {
+    background-color: #e08688;
+    background-image:
+      url('@/assets/imagens/desenhoMOtoLove.png'), url('@/assets/imagens/familiaFelizAmor.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-blend-mode: darken, luminosity;
+    background-position:
+      left center,
+      right center;
+    background-size: 30%;
+  }
+
+  .fundo-perguntas {
+    background-color: #e08688;
+    background-image:
+      url('@/assets/imagens/elefanteVoador.png'), url('@/assets/imagens/elefanteSentado.png');
+    background-blend-mode: luminosity;
+    /* background-size: contain; */
+    background-repeat: no-repeat;
+    background-position:
+      left top,
+      right center;
+    background-size: 23%;
+  }
+
+  .grid-perfumes {
+    display: grid;
+    width: 20% !important;
+    min-height: 380px;
+  }
+
+  .card-perfumes-header {
+    border-radius: 35% 35% 35% 35% / 35% 35% 35% 35% !important;
+    position: absolute;
+    z-index: 0;
+    top: -290px;
+    left: 53px;
+    align-self: anchor-center !important;
+
+    /* padding: 0px !important; */
+  }
+}
+
+.fundo-footer-sub {
   background-color: #e08688;
-  background-image:
-    url('@/assets/imagens/desenhoMOtoLove.png'), url('@/assets/imagens/familiaFelizAmor.png');
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-blend-mode: darken, luminosity;
-  background-position:
-    left center,
-    right center;
 }
 
 .fundo-produtos {
@@ -143,17 +242,6 @@
   margin-top: 100px !important;
 }
 
-.card-perfumes-header {
-  border-radius: 35% 35% 35% 35% / 35% 35% 35% 35% !important;
-  position: absolute;
-  z-index: 0;
-  top: -290px;
-  left: 53px;
-  align-self: anchor-center !important;
-
-  /* padding: 0px !important; */
-}
-
 .img-card-perfume {
   margin-top: 5px;
   margin-bottom: 5px;
@@ -178,12 +266,6 @@
 .card-sobreImage {
   background-image: url('@/assets/imagens/PORTADA20FRAGANCIAS.png');
   background-size: cover;
-}
-
-.grid-perfumes {
-  display: grid;
-  width: 20% !important;
-  min-height: 380px;
 }
 
 .btn-perfumes {
@@ -224,13 +306,14 @@
 }
 
 .border-efect-left-start {
-  width: 130px;
+  width: 50%;
   border: 2px solid rgb(255, 0, 0);
-  margin-left: 5%;
+  margin-left: 10%;
 }
 
 .border-efect-rigth-start {
-  width: 130px;
+  margin-left: 5%;
+  width: 30%;
   border: 2px solid rgb(255, 0, 0);
 }
 

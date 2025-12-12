@@ -16,46 +16,61 @@ import IconInsta from "@/assets/icons/IconInsta.vue"
     <hr class="mb-4 border-efect-medium mt-2 " > -->
     <h4 class="text-center text-dark fw-bold mb-5 mt-5">A Wings Of Love agradeçe sua visita.</h4>
     <!-- <hr class="text-dark" > -->
-    <div class="row justify-content-center">
+    <div class="row justify-content-center pb-5">
       <div class="col col-md-4">
-        <div class="row">
-          <div class="col-auto d-flex align-items-center">
-            <IconPhone style="height: 35px; width: 35px"  class="text-dark"  />
-          </div>
-          <div class="col d-flex align-items-center">
-              <h5 class="text-dark m-0 fw-light">(11) 94564876 - ICARO BUNDÃO</h5>
-          </div>
+      <div class="row justify-content-center">
+        <div class="col-2">
+          <div class="card card-footer border-0 p-3"></div>
         </div>
-        <hr class="text-dark" >
-        <div class="row">
-          <div class="col-auto d-flex align-items-center">
-            <IconPhone style="height: 35px; width: 35px"  class="text-dark"  />
-          </div>
-          <div class="col d-flex align-items-center">
-              <h5 class="text-dark m-0 fw-light">(11) 94564876 - REVENDEDORA</h5>
-          </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-4 ">
+          <div class="card card-footer border-0 p-3 rounded-top-4"></div>
         </div>
-        <hr class="text-dark" >
-        <div class="row">
-          <div class="col-auto d-flex align-items-center">
-             <IconEmail style="height: 35px; width: 35px" class="text-dark"/>
+      </div>
+      <div class="card rounded-4 border-0 card-footer p-4 shadow">
+          <div class="card-body border-0">
+            <div class="row">
+                <div class="col-auto d-flex align-items-center">
+                  <IconPhone style="height: 35px; width: 35px"  class="text-dark"  />
+                </div>
+                <div class="col d-flex align-items-center">
+                    <h6 class="text-dark m-0 fw-light">(11) 94564876 - ICARO BUNDÃO</h6>
+                </div>
+              </div>
+              <hr class="text-dark" >
+              <div class="row">
+                <div class="col-auto d-flex align-items-center">
+                  <IconPhone style="height: 35px; width: 35px"  class="text-dark"  />
+                </div>
+                <div class="col d-flex align-items-center">
+                    <h6 class="text-dark m-0 fw-light">(11) 94564876 - REVENDEDORA</h6>
+                </div>
+              </div>
+              <hr class="text-dark" >
+              <div class="row">
+                <div class="col-auto d-flex align-items-center">
+                  <IconEmail style="height: 35px; width: 35px" class="text-dark"/>
+                </div>
+                <div class="col d-flex align-items-center">
+                    <h5 class="text-dark m-0 fw-light">teste@teste.com.br</h5>
+                </div>
+              </div>
+              <hr class="text-dark" >
+              <div class="row">
+                <!-- <button class="p-0 btn btn-transparent text-dark shadow-0 w-100 text-start">
+                    <IconInsta style="height: 30px; width: 30px" /> @wingsOfLove
+                </button> -->
+                <div class="col-auto d-flex align-items-center">
+                  <IconInsta style="height: 35px; width: 35px" class="text-dark"/>
+                </div>
+                <div class="col d-flex align-items-center">
+                    <h5 class="text-dark m-0 fw-light">@wingsOfLove</h5>
+                </div>
+              </div>
           </div>
-          <div class="col d-flex align-items-center">
-              <h5 class="text-dark m-0 fw-light">teste@teste.com.br</h5>
-          </div>
-        </div>
-        <hr class="text-dark" >
-        <div class="row">
-          <!-- <button class="p-0 btn btn-transparent text-dark shadow-0 w-100 text-start">
-              <IconInsta style="height: 30px; width: 30px" /> @wingsOfLove
-          </button> -->
-          <div class="col-auto d-flex align-items-center">
-            <IconInsta style="height: 35px; width: 35px" class="text-dark"/>
-          </div>
-          <div class="col d-flex align-items-center">
-              <h5 class="text-dark m-0 fw-light">@wingsOfLove</h5>
-          </div>
-        </div>
+      </div>
+
       </div>
     </div>
     <!-- <div class="row justify-content-center">
