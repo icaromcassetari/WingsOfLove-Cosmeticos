@@ -48,46 +48,18 @@ fetchLista()
 
 </script>
 <template>
-  <div class="container py-5">
-    <div class="row mb-3">
+  <div class="container">
+    <div class="row mb-2">
       <div class="col">
-        <h1 class="text-center text-dark fw-light mb-5">PRODUTOS</h1>
+        <h1 class="text-center text-dark fw-light mt-5">PRODUTOS</h1>
       </div>
     </div>
-    <div class="row mb-5">
-      <!-- <div class="col col-md-4">
-        <BDropdown
-          :text="'Categoria ' + (categoria != null ? categoria : '')"
-          class="mt-2 p-0 text-muted"
-          variant="light  w-100 rounded-0 btn-lg fw-bold"
-          @click="setCategoria"
-          size="lg"
-        >
-          <BDropdownItem  value="Cítricos">Cítricos</BDropdownItem>
-          <BDropdownItem  value="Frutas">Frutas</BDropdownItem>
-          <BDropdownItem  value="Vegetais">Vegetais</BDropdownItem>
-          <BDropdownItem  value="Nozes">Nozes</BDropdownItem>
-          <BDropdownItem  value="Flores">Flores</BDropdownItem>
-          <BDropdownItem  value="Flores Brancas">Flores Brancas</BDropdownItem>
-          <BDropdownItem  value="Plantas">Plantas</BDropdownItem>
-          <BDropdownItem  value="Ervas">Ervas</BDropdownItem>
-          <BDropdownItem  value="Fougéres">Fougéres</BDropdownItem>
-          <BDropdownItem  value="Especiarias">Especiarias</BDropdownItem>
-          <BDropdownItem  value="Doces">Doces</BDropdownItem>
-          <BDropdownItem  value="Aromas Gourmets">Aromas Gourmets</BDropdownItem>
-          <BDropdownItem  value="Madeira">Madeira</BDropdownItem>
-          <BDropdownItem  value="Musgos">Musgos</BDropdownItem>
-          <BDropdownItem  value="Resinas">Resinas</BDropdownItem>
-          <BDropdownItem  value="Bálsamos">Bálsamos</BDropdownItem>
-          <BDropdownItem  value="Musk">Musk</BDropdownItem>
-          <BDropdownItem  value="Âmbares">Âmbares</BDropdownItem>
-          <BDropdownItem  value="Animálicas">Animálicas</BDropdownItem>
-          <BDropdownItem  value="Bebidas">Bebidas</BDropdownItem>
-          <BDropdownItem  value="Naturais">Naturais</BDropdownItem>
-          <BDropdownItem  value="Sintéticas">Sintéticas</BDropdownItem>
-          <BDropdownItem  value="">Não categorizado</BDropdownItem>
-        </BDropdown>
-      </div> -->
+    <div class="row mb-4">
+      <div class="col">
+        <p class="d-block text-center text-dark m-0 bg-danger-subtle rounded p-1">*A Wings of Love Cosméticos não possui conexão de qualquer natureza com as marcas citadas abaixo, sendo elas, de propriedade das respectivas empresas.*</p>
+      </div>
+    </div>
+    <div class="row mb-4">
       <div class="col">
         <BInputGroup class="mt-2 ">
           <template #prepend>
@@ -107,27 +79,25 @@ fetchLista()
         </BInputGroup>
       </div>
     </div>
-    <div class="row  mt-4">
-      <small class="d-block text-center text-danger fw-bold">*A Wings of Love Cosméticos não possui conexão de qualquer natureza com as marcas citadas abaixo, sendo elas, de propriedade das respectivas empresas.*</small>
-    </div>
+
   </div>
   <div class="container">
-    <div class="row mt-2">
+    <div class="row">
       <div class="grid-perfumes mb-4 d-flex"
         v-for="(valueListaPerfumes , indexListaPerfumes ) in getLista()"
         :key="indexListaPerfumes"
       >
-        <div class="card card-perfumes">
-          <div class="card-header card-perfumes-header border-0 bg-white shadow mt-2 d-flex align-items-center justify-content-center" >
-            <img :src="valueListaPerfumes.image" class="img-fluid img-card-perfume" :alt="valueListaPerfumes.nome_comercial" style="max-height: 100px;">
+        <div class="card card-perfumes shadow">
+          <div class="card-header bg-white d-flex align-items-center justify-content-center p-4 rounded-0 border-secondary" >
+            <img :src="valueListaPerfumes.image" class="img-fluid img-card-perfume" :alt="valueListaPerfumes.nome_comercial" style="max-height: 110px;">
           </div>
-          <div class="card-body border-0 bg-transparent  card-perfumes-body">
+          <div class="card-body bg-transparent ">
             <p style="font-size: 14px" class="text-dark fw-bold text-animation mb-3 text-center">{{ valueListaPerfumes.nome_comercial }}</p>
-            <small style="font-size: 12px" class="text-dark text-animation">{{ valueListaPerfumes.descricao }}</small>
+            <small style="font-size: 13px" class="text-dark text-animation">{{ valueListaPerfumes.descricao }}</small>
           </div>
-          <div class="card-footer p-0 border-0">
-            <button class="btn btn-white btn-sm w-100 fw-bold text-danger shadow-sm">
-                VISUALIZAR
+          <div class="card-footer bg-transparent border-muted p-2">
+            <button class="w-100 btn-perfumes border-0 btn rounded-0 btn-sm shadow-sm">
+                DETALHES
             </button>
           </div>
         </div>
@@ -140,7 +110,7 @@ fetchLista()
           pills
           :total-rows="rows"
           :per-page="perPage"
-          size="md"
+          size="lg"
           first-class='dark'
         />
       </div>

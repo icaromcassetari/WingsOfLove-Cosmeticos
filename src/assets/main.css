@@ -32,28 +32,22 @@
   }
 }
 
-.fundo-banner {
-  background-image: url('./imagens/fundoBanner2.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-blend-mode: luminosity;
-}
-
 @media only screen and (min-width: 200px) {
+  /* .container-perfumes {
+  } */
+
+  .fundo-banner {
+    background-image: url('./imagens/fundoBanner2.jpg');
+    background-size: auto;
+  }
+
   .grid-perfumes {
     display: grid;
     width: 100% !important;
     min-height: 380px;
-  }
-
-  .card-perfumes-header {
-    border-radius: 35% 35% 35% 35% / 35% 35% 35% 35% !important;
-    position: absolute;
-    z-index: 0;
-    top: -300px;
-    left: 140px;
-    align-self: anchor-center !important;
+    padding: 0px;
+    /* padding-left: 10% !important;
+    padding-right: 10% !important; */
   }
 
   .fundo-perguntas {
@@ -79,42 +73,38 @@
 }
 
 @media only screen and (min-width: 600px) {
+  .fundo-banner {
+    background-image: url('./imagens/fundoBanner2.jpg');
+    background-size: auto;
+  }
   .grid-perfumes {
     display: grid;
     width: 100% !important;
     min-height: 380px;
   }
-
-  .card-perfumes-header {
-    border-radius: 35% 35% 35% 35% / 35% 35% 35% 35% !important;
-    position: absolute;
-    z-index: 0;
-    top: -300px;
-    left: 190px;
-    align-self: anchor-center !important;
-  }
 }
 
 @media only screen and (min-width: 768px) {
+  .fundo-banner {
+    background-image: url('./imagens/fundoBanner2.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
   .grid-perfumes {
     display: grid;
     width: 50% !important;
     min-height: 380px;
   }
-
-  .card-perfumes-header {
-    border-radius: 35% 35% 35% 35% / 35% 35% 35% 35% !important;
-    position: absolute;
-    z-index: 0;
-    top: -290px;
-    left: 100px;
-    align-self: anchor-center !important;
-
-    /* padding: 0px !important; */
-  }
 }
 
 @media only screen and (min-width: 1200px) {
+  .fundo-banner {
+    background-image: url('./imagens/fundoBanner2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+
   .fundo-footer {
     background-color: #e08688;
     background-image:
@@ -125,7 +115,7 @@
     background-position:
       left center,
       right center;
-    background-size: 30%;
+    background-size: 28%;
   }
 
   .fundo-perguntas {
@@ -138,24 +128,18 @@
     background-position:
       left top,
       right center;
-    background-size: 23%;
+    background-size: 17%;
   }
 
   .grid-perfumes {
     display: grid;
-    width: 20% !important;
+    width: auto !important;
     min-height: 380px;
+    max-width: 20% !important;
   }
 
   .card-perfumes-header {
-    border-radius: 35% 35% 35% 35% / 35% 35% 35% 35% !important;
-    position: absolute;
-    z-index: 0;
-    top: -290px;
-    left: 53px;
-    align-self: anchor-center !important;
-
-    /* padding: 0px !important; */
+    margin-top: 0px !important;
   }
 }
 
@@ -236,12 +220,6 @@
   color: white !important;
 }
 
-.card-perfumes-body {
-  height: 45%;
-  padding: 0px !important;
-  margin-top: 100px !important;
-}
-
 .img-card-perfume {
   margin-top: 5px;
   margin-bottom: 5px;
@@ -250,12 +228,12 @@
 .card-perfumes {
   display: inline-flex;
   height: 100%;
-  margin-top: auto;
   min-height: 350px;
-  background-color: rgb(248 249 250 / 60%) !important;
+  background-color: rgb(248 249 250 / 75%) !important;
+  /* background-color: #e08688 !important; */
   border: 0px !important;
   border-radius: 0px !important;
-  padding: 15px !important;
+  /* padding: 15px !important; */
 }
 
 .border-misao {
@@ -269,12 +247,18 @@
 }
 
 .btn-perfumes {
-  display: none !important;
-  font-size: 12px !important;
+  color: black;
+  background-color: white !important;
 }
 
 .card-perfumes:hover .btn-perfumes {
-  display: block !important;
+  /* display: block !important; */
+  border-radius: 0px;
+}
+
+.btn-perfumes:hover {
+  color: white !important;
+  background-color: #e08688 !important;
 }
 
 .bordered {
